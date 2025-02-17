@@ -1,27 +1,20 @@
- #include <stdio.h>
+#include <stdio.h>
 
 int main() {
-    int N;
+    int n;
+
+    scanf("%d", &n);
 
 
-    printf("Enter an even integer: ");
-    scanf("%d", &N);
-
-
-    if (N % 2 != 0) {
-
-        printf("Wrong input\n");
-    } else {
-
-        for (int i = 0; i < N; i++) {
-            if (i % 2 == 0) {
-                printf("*");
-            } else {
-                printf("+");
-            }
+    if (n % 2 == 0 && n > 0) {
+        for (int i = 0; i < n / 2; i++) {
+            printf("*");
+            printf("+");
         }
         printf("\n");
-    }
+    } else {
+        printf("Wrong input\n");
 
-    return 0;
+     }
+  return 0;
 }
